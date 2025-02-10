@@ -1,3 +1,4 @@
+
 .navbar {
     background-color: #800000;
     overflow: hidden;
@@ -23,22 +24,120 @@
     background-color: gray;
 }
 
-.banner {
-    margin-top: 20px;
-}
-
-.image {
-    margin: 2px;
-    margin-top: 30px;
-}
-
-.flex-container {
-    display: flex;
-    margin: 10px;
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
     padding: 20px;
-
+}
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+}
+.left-banner {
+    width: 75%;
+    margin-left: 0px;
+ 
+}
+.right-form {
+    width: 70%;
+    background: #eee;
+    padding: 10px;
+    border-radius: 9px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+.form-group {
+    margin-bottom: 10px;
+}
+input, textarea {
+    width: 50%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-#charge {
-    font-size: 30px;
+.question-button{
+    background-color: rgb(150, 83, 83);
+    width: 50%;
+    color: white;
+    border: red;
+    cursor: pointer;
+
+}
+.confidential {
+    transform: rotate(-20deg);
+    display: flex;
+    float: right;
+    margin-left: 8px; 
+    right: 10px;
+    top: 20px;
+}
+    
+   
+
+.privacy {
+    font-size: 17px;
+    color: gray;
+    margin-top: 10px;
+}
+.submit-btn {
+    background: rgb(168, 65, 65);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    font-weight: bolder;
+}
+.submit-btn:hover {
+    background: darkred;
+}
+.grid-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.box {
+    background: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 50%;
+}
+
+h2 {
+    font-size: 20px;
+    color: black;
+}
+.highlight {
+    color: red;
+    font-weight: bold;
+    text-align: right;
+}
+.button {
+    display: inline-block;
+    background: red;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: right;
+}
+.button:hover {
+    background: darkred;
+}
+.image1 {
+    display: flex;
+    width: 80px;
+    align-items: right;
+    float: right;
+ 
+    margin-top: -6px; 
 }
