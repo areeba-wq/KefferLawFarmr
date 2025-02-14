@@ -1,33 +1,100 @@
-
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:none;
+}
 .navbar {
     background-color: #800000;
     overflow: hidden;
     display: flex;
-    padding: 10px 0;
+    padding: 1px 0;
     justify-content: right;
 }
+.navbar ul{
+    float:right;
+    margin-right: 10px;
+}
+.navbar ul li{
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 0px;
+}
 
-.navbar a {
+.navbar ul li a {
     color: white;
     text-decoration: none;
-    padding: 14px 20px;
-    font-size: 18px;
+    padding: 7px 13px;
+    font-size: 17px;
     font-weight: bold;
     text-transform: uppercase;
 }
-
 .navbar a:hover {
     background-color: gray;
 }
-
 .navbar a.active {
     background-color: gray;
 }
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media screen (max-width: 952px) {
+    .navbar ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width: 952px) {
+    .checkbtn{
+        display: block;
+    }
+        ul{
+            position: fixed;
+            width: 100%;  
+            height: 100vh; 
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%);  
+            background: maroon; 
+            display: flex;
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center;
+        }
+       
+        .navbar ul li{
+            display: block;
+
+            margin: 10px 0;
+        }
+        .navbar ul li a{
+            font-size: 20px;
+        }
+        #check:checked ~ ul{
+            left: 50%;
+           
+          
+        }
+    }
 
 .container {
     max-width: 1100px;
     margin: 40px auto;
     padding: 20px;
+    min-width: 0; 
+   
 }
 .top-section {
     display: flex;
@@ -37,14 +104,7 @@
 .left-banner {
     width: 75%;
     margin-left: 0px;
- 
-}
-.right-form {
-    width: 70%;
-    background: #eee;
-    padding: 10px;
-    border-radius: 9px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    margin-right: 15px;
 }
 .form-group {
     margin-bottom: 10px;
@@ -56,88 +116,162 @@ input, textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-
-.question-button{
-    background-color: rgb(150, 83, 83);
-    width: 50%;
-    color: white;
-    border: red;
-    cursor: pointer;
-
-}
-.confidential {
-    transform: rotate(-20deg);
-    display: flex;
-    float: right;
-    margin-left: 8px; 
-    right: 10px;
-    top: 20px;
-}
-    
-   
-
-.privacy {
-    font-size: 17px;
-    color: gray;
-    margin-top: 10px;
-}
-.submit-btn {
-    background: rgb(168, 65, 65);
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    width: 50%;
-    font-weight: bolder;
-}
-.submit-btn:hover {
-    background: darkred;
-}
-.grid-section {
+.second-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5px;
-    margin-top: 20px;
-    margin-bottom: 50px;
+    margin:0;
+    padding: 0;
 }
-.box {
-    background: white;
-    padding: 10px;
-    border: 1px solid #ddd;
+.box1{
     text-align: left;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    margin-bottom: 50%;
+    margin-left: 40px;
+    padding: 30px;
+    margin-bottom: 100px;
 }
+.box2{
+    border-left: 2px solid rgb(154, 150, 150);
+    border-right: 0px;
+    padding: 10px;
+    text-align: left;
+    margin-top: 0px; 
+    margin-bottom: 20px;
+}
+.box3 {
+    border-left: 2px solid rgb(154, 150, 150);
+    padding: 10px;
+    text-align: left;
+    margin-top: 0px; 
+    margin-bottom: 20px;
 
+   
+}
+.inner{
+    display:flex;
+    justify-content: space-between;
+}
 h2 {
     font-size: 20px;
     color: black;
 }
 .highlight {
-    color: red;
+    color: rgb(161, 32, 32);
     font-weight: bold;
-    text-align: right;
+    text-align: right; 
 }
 .button {
-    display: inline-block;
-    background: red;
+    display: flex;
+    
+    margin-top: 12px;
+    background: rgb(155, 40, 40);
     color: white;
-    text-decoration: none;
-    padding: 8px 15px;
+    padding: 10px 15px;
     font-weight: bold;
-    border-radius: 5px;
-    margin-top: 10px;
-    text-align: right;
+  margin-left:40px;
+    box-shadow: #7b0000;
+    float: left;
+    border: none;
 }
-.button:hover {
-    background: darkred;
+
+#btn1 img{
+margin: 1px 0px 0px 8px
 }
+#btn2 img{
+    margin: 1px 0px 0px 30px;
+    
+    }
 .image1 {
     display: flex;
     width: 80px;
     align-items: right;
     float: right;
- 
-    margin-top: -6px; 
+    margin-top: -6px;
+    margin-right: 10px;
 }
+.buttom-container {
+    display: flex;
+    max-width: 1100px;
+    margin: 20px auto;
+}
+.sidebar-left, .sidebar-right {
+    width: 30%;
+    padding: 20px;
+}
+.content {
+    width: 50%;
+    padding: 20px;
+    background: white;
+}
+.content h1 {
+    font-size: 24px;
+}
+.content p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+.badges img {
+    width: 100px;
+    display: block;
+    margin: 10px auto;
+}
+.social-icons a {
+    display: inline-block;
+    margin-right: 5px;
+}
+.sidebar {
+    width: 25%;
+    background: white;
+    padding: 20px;
+}
+
+.sidebar h3 {
+    
+    font-size: 20px;
+}
+
+.menu a {
+    display: block;
+    background: #555;
+    color: white;
+    padding: 15px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 15px;
+    height: 20%;
+    width: 100%;
+}
+
+.menu a span {
+    float: right;
+    font-size: 12px;
+    color: #ddd;
+}
+.sidebar-right .box {
+    background: #333;
+    color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.sidebar-right .box a {
+    display: block;
+    background: red;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+#menu_bg{
+    display: flex;
+   
+    
+}
+#menu_bg img{
+    margin: 5px 0px 6px 0px;
+}
+

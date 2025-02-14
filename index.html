@@ -3,9 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Keffer LAw Farm</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css"> 
+
 </head>
+<style>
+    .form-wrapper {
+    width: 70%;
+    background: url('form_bg.jpg') no-repeat center center/cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: #333;
+}
+.form-wrapper h3 {
+    margin: 10px 0;
+    color: #333;
+    font-size: 20px;
+}
+.form-wrapper p {
+    font-size: 19px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+.form-wrapper label{
+
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+.form-wrapper textarea {
+
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+.form-wrapper button {
+    width: 100%;
+    padding: 10px;
+    background: #b22222;
+    color: white;
+    border: none;
+    
+    font-weight: bold;
+}
+.form-wrapper button:hover {
+    background: darkred;
+}
+.main-form{
+    display: flex;
+    align-items: center;  
+    gap: 30px; 
+}
+
+.confidential {
+    display: flex;
+    flex-direction: column;;
+    padding: 1px 10px;
+    transform: rotate(30deg);
+    font-weight: bold;
+    width: 150px; 
+    
+}
+
+.form-groupp, textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0;
+}
+.question{
+    display:flex;
+    max-width: max-content;
+    gap: 70px;
+    height: 50px;
+    letter-spacing: 1px;
+    
+}
+.button-style{
+    font-size: large;
+    max-width: max-content;
+    padding: 10px 15px;
+    font-display: column;  
+    width:20%;
+
+}
+.privacy {
+    margin-top: 1%;
+    display: flex;
+}
+
+</style>
 <body>
     <header>
           
@@ -21,98 +111,184 @@
         </div>
 
         <div class="navbar">
-            <a href="#" class="active">Home</a>
-            <a href="#">Biography</a>
-            <a href="#">Blog</a>
-            <a href="#">Areas We Serve</a>
-            <a href="#">Library</a>
-            <a href="#">Contact</a>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <img src="images/responsive_menu_icon.png">
+            </label>
+            <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li> <a href="#">Biography</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Areas We Serve</a></li>
+            <li>><a href="#">Library</a></li>
+            <li><a href="#">Contact</a></li>
+            </ul>
         </div>
     </header>
     <div class="container">
         <!-- Top Section -->
         <div class="top-section">
             <div class="left-banner">
-              <img src="images/gurantee_banner.gif" alt="banner" width="100%" height="90%">
+              <img src="images/gurantee_banner.gif" alt="banner" width="100%" height="100%">
             </div>
             
-            <div class="right-form">
-
-                <button type="question" class="question-button"><h3>QUESTIONS?</h3></button>
-                <p>Have a <span class="highlight">Question</span> About Your Case?</p>
+            <!-- right-section -->
+            <div class="form-wrapper">
+                <div class="question">
+                <button class="button-style" type="question">QUESTIONS?</button>
+                <h3 >Have a <strong style="color: blue; font-size: larger;">Question</strong> <br>About Your Case?</h3>
+            </div><br>
+                <p>Enter your information and get your questions answered<br>quickly and discreetly or call us at: <strong>540.433.6906</strong></p>
                 
-
-                <form>
+            <div class="main-form">
                     <div class="form-group">
                         <label for="name">NAME:</label>
                         <input type="text" id="name">
-                    </div>
-                    <div class="form-group">
                         <label for="email">EMAIL:</label>
                         <input type="email" id="email">
-                    </div>
-                    
-                    
-                    <div class="form-group">
                         <label for="phone">PHONE:</label>
                         <input type="text" id="phone">
                     </div>
-                    <div>
-                        <img class="confidential"src="images/confidential.png" alt="confidential">
+                        <div class="confidential">
+                        <img src="images/confidential.png" alt="confidential">
                     </div>
-                    
-                    <div class="form-group">
-                        <textarea style="width: 90%;" id="message" rows="3">Tell us about your case here</textarea></p>
                     </div>
-                    <p class="privacy">100% Privacy Guaranteed
-                    <button type="submit" class="submit-btn">Ask Us About Your Case</button>
-                    
-
-                </form>  
-            </div>
-            
-        </div>
-        
-       
-
-        <!-- Grid Section -->
-        <div class="grid-section">
-            <!-- DUI Section -->
-            <div class="box">
-                <h2>CHARGED WITH <span class="highlight">DUI?</span></h2>
-                <p style="color: red;"><b>FREE CASE EVALUATION</b></p>
-                <p>Being charged with a DUI<br>can be scary. Get the help<br>you deserve.</p>
-                 <img src="images/paste_board.gif" alt="Checklist" class="image1">
-                <a href="#" class="button">CLICK HERE</a>
-               
-            </div>
-
-            <!-- Law Blog -->
-            <div class="box">
-                <h2>LAW <span class="highlight">BLOG</span></h2>
-                <p>Learn more about Virginia Traffic Laws.</p>
-                <a href="#" class="button">CLICK HERE</a>
-                <img src="images/pic1.gif" alt="Law Blog" class="image">
-            
-                <h2>CASE <span class="highlight">RESULTS</span></h2>
-                <p>See how we help our clients. Read our latest case results.</p>
-                <a href="#" class="button">CLICK HERE</a>
-                <img src="images/order_icon.gif" alt="Case Results" class="image">
+                     <div class="form-groupp">
+                     <textarea style="width:90%" placeholder="Write your case details here..."></textarea>
+                    </div>
+                    <p class="privacy">100% Privacy Guaranteed &nbsp;
+                    <button style="width:50%"  id="btn2">Ask Us About Your Case<img src="images/bullet_white.gif"> </button>
             </div>
         
-
-            <!-- Certificates & Credentials -->
-            <div class="box">
-                <img src="images/qqq.gif" alt="Credentials" class="image">
-                <img src="images/national_college_small.gif" alt="Credentials" class="image">
-
-                
-                <h2>CERTIFICATES & <span class="highlight">CREDENTIALS</span></h2>
-                <p>Keefer Law Firm has protected the rights of Virginians for over 30 years.</p>
-                <a href="#" class="button">LEARN MORE</a>
-            </div>
         </div>
     </div>
-    
+        <!-- second Section -->
+        <div class="second-section">
+            <!-- DUI Section -->
+            <div class="box1">
+                <h2>CHARGED WITH <span class="highlight">DUI?</span></h2>
+                <p style="color: rgb(178, 37, 37);"><b>FREE CASE EVALUATION</b></p>
+                <br>
+                <div class="inner"> 
+                <p>Being charged with a DUI<br>can be scary. Get the help<br>you deserve.<br><br>Click here to let us know<br>How we can help you with your</p><br>
+               <img src="images/paste_board.gif" alt="Checklist" class="image1">
+                </div>
+                <div>
+                <button class="button" id="btn1">
+                    CLICK HERE <img src="images/bullet_white.gif" class="icon">
+                </button>
+                
+            </div>
+            </div>
+            
+            <!-- Law Blog -->
+            <div class="box2">
+                <h2>LAW <span class="highlight">BLOG</span></h2>
+                <p>Learn more about<br> Virginia Traffic Laws.</p>
+                <div>
+                    <button class="button" id="btn1">
+                        CLICK HERE <img src="images/bullet_white.gif" class="icon">
+                    </button>
+                    
+                </div>
+                <img src="images/pic1.gif" alt="Law Blog" class="image">
+                <hr>
+            
+                <h2>CASE <span class="highlight">RESULTS</span></h2>
+                <p>See how we help our clients.<br>Read our latest case results.</p>
+                <div>
+                    <button class="button" id="btn1">
+                        CLICK HERE <img src="images/bullet_white.gif" class="icon">
+                    </button>
+                    
+                </div>
+                <img src="images/order_icon.gif" alt="Case Results" class="image">
+            </div>
+       
+
+            <!-- Certificates & Credentials -->
+            <div class="box3">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="images/qqq.gif" alt="Credentials" class="image">&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="images/national_college_small.gif" alt="Credentials" class="image"><br><br>
+
+                <h2>CERTIFICATES &<br><span class="highlight">CREDENTIALS</span></h2>
+                <p>Keefer Law Firm has protected the<br>rights of Virginians for over 30 years.</p>
+                <div>
+                    <button class="button" id="btn1">
+                        CLICK HERE <img src="images/bullet_white.gif" class="icon">
+                    </button>
+                    
+                </div>
+            </div>
+        </div>
+        <img src="images/hr_shadow.png">
+        
+
+        <div class="buttom-container">
+           <!-- Left Sidebar -->
+        <div class="sidebar">
+            <h3>PRACTICE <span style="color: #b22222;">AREAS</span></h3>
+            <div class="menu"> <br>
+                 <a href="#">DUI & DWI <span><br>LEARN MORE &nbsp;<img src="images/bullet_red.gif"></span> </a>
+                <a href="#">RECKLESS DRIVING <span>LEARN MORE &nbsp;<img src="images/bullet_red.gif"></span></a>
+                <a href="#">SPEEDING TICKETS <span>LEARN MORE &nbsp;<img src="images/bullet_red.gif"></span></a>
+                <a href="#">TRAFFIC VIOLATIONS <span>LEARN MORE&nbsp;<img src="images/bullet_red.gif"></span></a>
+            </div>
+            <div style="margin-top: 20%;">
+                <h2>LEARN <SPAN style="color:brown">MORE</SPAN> ABOUT</h2>
+            </div>
+            <div style="margin-left: 30%; color: grey; font-size: large;">
+                &nbsp;&nbsp;&nbsp;<P>MENU<BR>
+                AREA<BR>
+                HERE</P>
+            </div>
+        </div>
+            
+            <div class="content">
+                <h1>PAGE TITLE HERE</h1>
+                
+                <p>John S. Keffer is a dedicated attorney with deep roots in the Sumter, SC community. A proud veteran of the United States Air Force, John served honorably as a weapons loader on F-16 and A-10 aircraft before completing his undergraduate degree, cum laude, from the University of South Carolina in 1995. He earned his Doctorate in Law from the University of South Carolina in 1999 and has been practicing law in Sumter ever since.</p>
+                <p>Beyond his legal practice, John is deeply invested in the local community, having served on the Sumter School District Consolidation Committee and participated in civic organizations like the Sumter Rotary Club. He has also spent many years volunteering as a youth sports coach, reinforcing his commitment to the next generation.</p>
+            </div>
+            
+             <div class="sidebar-right">
+                <h3>CLIENT <span style="color:rgb(177, 56, 56);"><br>TESTIMONIALS</span></h3>
+                <p>Read what others say<br>about our firm<br> about Keefer Law Firm
+                <img src="images/lf_bt_hr_shadow.png">
+                <button class="button" id="btn1">CLICK HERE <img src="images/bullet_white.gif" class="icon"></button></p>
+                    <br><br><br>
+                
+                
+                <h3>DOWNLOAD <span style="color:rgb(171, 40, 40);"><br>FREE REPORTS</span></h3>
+                <p>Discover the truth about<br> Virginia Law
+                    <img src="images/lf_bt_hr_shadow.png">
+                    <button class="button" id="btn1">
+                        CLICK HERE <img src="images/bullet_white.gif" class="icon">
+                    </button>
+    <br><br>
+                <br><br><h3>CONTACT <span style="color:rgb(167, 35, 35);">OUR<br>OFFICES</span></h3>
+                <p>Get your questions<br>answered right now
+                <img src="images/lf_bt_hr_shadow.png"></p>
+                <button class="button" id="btn1">
+                    CLICK HERE <img src="images/bullet_white.gif" class="icon">
+                </button><br><br><br><br>
+                
+
+                <div class="badges">
+                    <img src="images/avo_rating_large.gif" alt="Rating Badge">
+                    <img src="images/national_college_large.gif" alt="Membership Badge">
+                </div>
+                
+                <h3>&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;FOLLOW<span style="color:brown"> US</span></h3>
+                <img src="images/lf_bt_hr_shadow.png">
+                <div class="social-icons">
+                    &nbsp; &nbsp; <a href="#"><img src="images/fb_icon.gif" width="30"></a>
+                    &nbsp;<a href="#"><img src="images/twitter_icon.gif" width="30"></a>
+                    &nbsp; <a href="#"><img src="images/google_icon.gif" width="30"></a>
+                    &nbsp; <a href="#"><img src="images/linked_icon.gif" width="30"></a>
+                </div>
+            </div>
+        </div> 
 </body>
 </html>
